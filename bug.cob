@@ -1,0 +1,3 @@
+MOVE CORRESPONDING WS-RECORD TO DB-RECORD.
+
+This statement appears innocuous, but it can lead to errors if the structures WS-RECORD and DB-RECORD do not have identical data types and lengths for corresponding fields.  COBOL's MOVE CORRESPONDING is not type-safe; it performs a MOVE operation, potentially leading to truncation, data corruption, or unexpected results if the target field is smaller than the source, or if incompatible data types are involved.
